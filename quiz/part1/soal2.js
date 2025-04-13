@@ -1,64 +1,41 @@
-//pada soal yg kedua, kalian harus belajar method `splice`, `slice`, `join`, 'split', dan lainnya
-
 let input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 
-function dataHandling(input) {
-    input.splice(1,1,"Roman Alamsyah Elsharawy");
-    input.splice(2,1,"Provinsi Bandar Lampung");
-    input.splice(4,1,"Pria","SMA Internasional Metro");
-    console.log(input);
-
-    let bulan = input[3].split("/");
-    switch (bulan[1]) {
+function dataHandling2(input) {
+    input.splice(1,4,"Roman Alamsyah Elsharawy","Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro");
+   console.log(input);
+    let namaBulan = input[3].split("/");
+    let bulanAngka = namaBulan[1];
+    let hasilBulan = "";
+    switch(bulanAngka) {
         case "01":
-            console.log("Januari");
+            hasilBulan = "Januari";
             break;
         case "02":
-            console.log("Februari");
+            hasilBulan = "Februari";
             break;
         case "03":
-            console.log("Maret");
+            hasilBulan = "Maret";
             break;
         case "04":
-            console.log("April");
+            hasilBulan = "April";
             break;
         case "05":
-            console.log("Mei");
+            hasilBulan = "Mei";
             break;
-        case "06":
-            console.log("Juni");
-            break;
-        case "07":
-            console.log("Juli");
-            break;
-        case "08":
-            console.log("Agustus");
-            break;
-        case "09":
-            console.log("September");
-            break;
-        case "10":
-            console.log("Oktober");
-            break;
-        case "11":
-            console.log("November");
-            break;
-        case "12":
-            console.log("Desember");
-            break;
+            default:
+            "salah nama bulan";
+                break;
     }
-    console.log(bulan);
+    console.log(hasilBulan);
+    let bulanArray = namaBulan.reverse();
+    console.log(bulanArray);
+    let ubahPosisi = [namaBulan[2],namaBulan[1],namaBulan[0]];
+    console.log(ubahPosisi.join('-'));
+    console.log(input[1].slice(0,15))
 
-    input.splice(3,1,"1989/21/05");
-    let tanggal = input[3].split("/");
-    console.log(tanggal);
-    tanggal.splice(0,3,"21","05","1989");
-    let tanggalJoin = tanggal.join("-");
-    console.log(tanggalJoin);
-    console.log(input[1].slice(0,15));
-    console.log(input[2].slice(9,23)); //Percobaan
 }
-dataHandling(input);
+
+dataHandling2(input);
 
 /**
  * keluaran yang diharapkan (pada console)
