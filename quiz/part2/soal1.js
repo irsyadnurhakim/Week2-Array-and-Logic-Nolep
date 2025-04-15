@@ -4,10 +4,15 @@ Diberikan sebuah function palindrome(kata) yang menerima satu parameter. Functio
 
 function palindrome(kata) {
     // you can only write your code here!
-    const cleanedKata = kata.replace(/\s+/g, '').toLowerCase(); //tolong hapus semua spasi di dalam kalimat ini dan ubah semua huruf menjadi huruf kecil
-    const reversedKata = cleanedKata.split('').reverse().join(''); //mengubah string menjadi array, membalikkan array, dan menggabungkan kembali menjadi string
-    return cleanedKata === reversedKata; //periksa apakah kata yang dibersihkan sama dengan kata yang dibalik}
-}
+    let sTr = kata;
+    let membalikanKata = sTr.split('').reverse().join('');
+    if ( sTr === membalikanKata){
+        return true;
+    } else {
+        return false;
+    }
+  }
+  
   // TEST CASES
   console.log(palindrome('katak')); // true
   console.log(palindrome('blanket')); // false
