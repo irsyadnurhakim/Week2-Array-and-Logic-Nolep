@@ -1,19 +1,19 @@
 function perkalianUnik(arr) {
     // you can only write your code here!
-    let hasil = [];
-
-    for(i = 0 ; i < arr.length ; i++) {
-        let total = 1;
-    for(j = 0 ; j < arr.length ; j++) {
-        if(i !== j) {
-            total *= arr[j];
+    let hasil =[];
+    for(i = 0; i < arr.length ; i++) {
+        let total = 1
+        for(j = 0 ; j < arr.length ; j++) {
+            if(i !== j) {
+                total *= arr[j];
+            }
         }
-    }
-    hasil.push(total);
+        hasil.push(total);
     }
     return hasil;
   }
-
+  
+  // TEST CASES
   console.log(perkalianUnik([2, 4, 6])); // [24, 12, 8]
   console.log(perkalianUnik([1, 2, 3, 4, 5])); // [120, 60, 40, 30, 24]
   console.log(perkalianUnik([1, 4, 3, 2, 5])); // [120, 30, 40, 60, 24]
