@@ -1,10 +1,10 @@
 function perkalianUnik(arr) {
     // you can only write your code here!
     let hasil =[];
-    for(i = 0; i < arr.length ; i++) {
-        let total = 1
-        for(j = 0 ; j < arr.length ; j++) {
-            if(i !== j) {
+    for(i = 0 ; i < arr.length ; i++){
+        let total = 1;
+        for(j = 0 ; j <arr.length; j++){
+            if(i !== j){
                 total *= arr[j];
             }
         }
